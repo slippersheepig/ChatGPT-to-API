@@ -7,4 +7,4 @@ RUN cd /cta && go mod download && go build -o /cta/ChatGPT-To-API .
 FROM scratch
 WORKDIR /cta
 COPY --from=builder /cta/ChatGPT-To-API .
-CMD [ "freechatgpt" ]
+CMD [ "./ChatGPT-To-API" ]
