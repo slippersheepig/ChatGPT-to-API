@@ -17,6 +17,7 @@ services:
       - ./accounts.txt:/cta/accounts.txt #如无账号可删
     environment:
       SERVER_HOST: 0.0.0.0
+      ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
 ```
 - if your ip is blocked, use this
 ```bash
@@ -33,6 +34,7 @@ services:
       - ./accounts.txt:/cta/accounts.txt #如无账号可删
     environment:
       SERVER_HOST: 0.0.0.0
+      ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
       HTTP_PROXY: http://wgcf:40002
     depends_on:
       - wgcf
