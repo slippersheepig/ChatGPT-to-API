@@ -1,6 +1,8 @@
 https://github.com/xqdoo00o/ChatGPT-to-API  
 `docker-compose.yml`  
-for those ips which can access chatgpt
+> [!TIP]
+> 如果没有账号，将部署代码中包含harPool和account.txt的这两行注释即可（据说不登录账号会比较智障，请自行测试）
+- for those ips which can access chatgpt
 ```bash
 services:
   app:
@@ -10,13 +12,13 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./harPool:/cta/harPool
-      - ./api_keys.txt:/cta/api_keys.txt
-      - ./accounts.txt:/cta/accounts.txt
+      - ./harPool:/cta/harPool #如无账号可删
+      - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
+      - ./accounts.txt:/cta/accounts.txt #如无账号可删
     environment:
       SERVER_HOST: 0.0.0.0
 ```
-if your ip is blocked, use this
+- if your ip is blocked, use this
 ```bash
 services:
   app:
@@ -26,9 +28,9 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./harPool:/cta/harPool
-      - ./api_keys.txt:/cta/api_keys.txt
-      - ./accounts.txt:/cta/accounts.txt
+      - ./harPool:/cta/harPool #如无账号可删
+      - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
+      - ./accounts.txt:/cta/accounts.txt #如无账号可删
     environment:
       SERVER_HOST: 0.0.0.0
       HTTP_PROXY: http://wgcf:40002
