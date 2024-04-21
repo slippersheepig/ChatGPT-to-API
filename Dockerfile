@@ -5,7 +5,7 @@ RUN git clone https://github.com/xqdoo00o/ChatGPT-to-API.git /cta
 RUN cd /cta && go build
 
 FROM alpine
-#ENV GIN_MODE=release
+ENV GIN_MODE=release
 RUN apk --no-cache add ca-certificates tzdata
 WORKDIR /cta
 COPY --from=builder /cta/freechatgpt .
