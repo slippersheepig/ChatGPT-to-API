@@ -6,7 +6,7 @@ RUN cd /cta && go build
 
 FROM alpine
 ENV GIN_MODE=release
-RUN apk --no-cache add ca-certificates tzdata
+RUN apk --no-cache add ca-certificates
 WORKDIR /cta
 COPY --from=builder /cta/freechatgpt .
 CMD [ "./freechatgpt" ]
