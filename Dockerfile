@@ -6,7 +6,6 @@ RUN cd /cta && go build
 
 FROM scratch
 ENV GIN_MODE=release
-RUN apk --no-cache add ca-certificates
 WORKDIR /cta
 COPY --from=builder /cta/freechatgpt .
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
