@@ -43,21 +43,21 @@ https://github.com/xqdoo00o/ChatGPT-to-API
   + ```bash
     services:
       app:
-      image: sheepgreen/chatgpt-to-api
-      container_name: cta
-      restart: always
-      ports:
-        - 8080:8080
-      volumes:
-        - ./harPool:/cta/harPool #如无账号可删此行
-        - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
-        - ./accounts.txt:/cta/accounts.txt #如无账号可删此行
-      environment:
-        SERVER_HOST: 0.0.0.0
-        ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
-        HTTP_PROXY: http://wgcf:40002
-      depends_on:
-        - wgcf
+        image: sheepgreen/chatgpt-to-api
+        container_name: cta
+        restart: always
+        ports:
+          - 8080:8080
+        volumes:
+          - ./harPool:/cta/harPool #如无账号可删此行
+          - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
+          - ./accounts.txt:/cta/accounts.txt #如无账号可删此行
+        environment:
+          SERVER_HOST: 0.0.0.0
+          ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
+          HTTP_PROXY: http://wgcf:40002
+        depends_on:
+          - wgcf
       wgcf:
         image: zenexas/wgcf-socks
         container_name: wgcf
