@@ -58,10 +58,10 @@ https://github.com/xqdoo00o/ChatGPT-to-API
         HTTP_PROXY: http://wgcf:40002
       depends_on:
         - wgcf
-    wgcf:
-      image: zenexas/wgcf-socks
-      container_name: wgcf
-      restart: always
+      wgcf:
+        image: zenexas/wgcf-socks
+        container_name: wgcf
+        restart: always
     ```
 - 五、文件位置关系如下图
   + ![image](https://github.com/slippersheepig/ChatGPT-to-API/assets/58287293/b1eda56d-5b43-410b-ac35-f9dd62ed748f)
