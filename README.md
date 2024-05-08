@@ -1,5 +1,6 @@
 从ChatGPT网站模拟使用API  
-https://github.com/xqdoo00o/ChatGPT-to-API
+如需使用[Railway](https://railway.app)平台部署请访问https://github.com/slippersheepig/ChatGPT-to-API-Railway  
+源码https://github.com/xqdoo00o/ChatGPT-to-API
 > [!TIP]
 > 如果没有账号，将部署代码中包含harPool和account.txt的这两行注释即可（据说不登录账号会比较智障，请自行测试）
 
@@ -65,7 +66,7 @@ https://github.com/xqdoo00o/ChatGPT-to-API
     ```
 - 五、文件位置关系如下图
   + ![image](https://github.com/slippersheepig/ChatGPT-to-API/assets/58287293/b1eda56d-5b43-410b-ac35-f9dd62ed748f)
-- 六、运行`docker-compose up -d`即启动成功，API访问地址为`http://[ip]:8080/v1/chat/completions`，根据你使用的ChatGPT项目自行修改代理地址即可
+- 六、运行`docker-compose up -d`即启动成功，API访问地址为`http://[ip]:8080/v1/chat/completions`，API KEY为`api_keys.txt`里填写的KYE，根据你使用的ChatGPT项目自行修改代理地址即可
 - 七、注意事项
   + 版权归xqdoo00o所有，更多信息请查看作者项目
   + 关于谷歌等第三方登录账号如何部署及其他问题请参考作者项目说明，本项目恕不解答，请谅解
