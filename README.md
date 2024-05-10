@@ -66,7 +66,17 @@
     ```
 - 五、文件位置关系如下图
   + ![image](https://github.com/slippersheepig/ChatGPT-to-API/assets/58287293/b1eda56d-5b43-410b-ac35-f9dd62ed748f)
-- 六、运行`docker-compose up -d`即启动成功，API访问地址为`http://[ip]:8080/v1/chat/completions`，API KEY为`api_keys.txt`里填写的KYE，根据你使用的ChatGPT项目自行修改代理地址即可
+- 六、运行`docker-compose up -d`即启动成功，API访问地址为`http://[ip]:8080/v1/chat/completions`，API KEY为`api_keys.txt`里填写的KEY，根据你使用的ChatGPT项目自行修改代理地址即可
+  + 常见项目使用方法如下
+    + https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+      + OPENAI_API_KEY=`api_keys.txt`里填写的KEY
+      + BASE_URL=http://[ip]:8080
+    + https://github.com/Chanzhaoyu/chatgpt-web
+      + OPENAI_API_KEY=`api_keys.txt`里填写的KEY
+      + OPENAI_API_BASE_URL=http://[ip]:8080
+    + https://github.com/RockChinQ/QChatGPT
+      + "keys": { "openai": ["`api_keys.txt`里填写的KEY"] }
+      + "openai-chat-completions": { "base-url": "http://[ip]:8080/v1" }
 - 七、注意事项
   + 版权归xqdoo00o所有，更多信息请查看作者项目
   + 关于谷歌等第三方登录账号如何部署及其他问题请参考作者项目说明，本项目恕不解答，请谅解
