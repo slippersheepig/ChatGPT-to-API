@@ -35,7 +35,5 @@ jobs:
             linux/arm/v7
             linux/s390x
             linux/ppc64le
-            linux/386
-            linux/riscv64
           push: true
           tags: sheepgreen/chatgpt-to-api:latest
