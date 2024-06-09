@@ -1,3 +1,5 @@
+> 关于refresh_token使用方法详见作者项目
+
 从ChatGPT网站模拟使用API  
 如需使用[Railway](https://railway.app)平台部署请访问https://github.com/slippersheepig/ChatGPT-to-API-Railway  
 源码https://github.com/xqdoo00o/ChatGPT-to-API
@@ -35,9 +37,10 @@
         ports:
           - 8080:8080
         volumes:
-          - ./harPool:/cta/harPool #如无账号可删此行
+          - ./harPool:/cta/harPool #如无账号，或使用refresh_token时可删此行
           - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
           - ./accounts.txt:/cta/accounts.txt #如无账号可删此行
+          #- ./cookies.json:/cta/cookies.json #使用refresh_token时取消注释
         environment:
           SERVER_HOST: 0.0.0.0
           ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
@@ -52,9 +55,10 @@
         ports:
           - 8080:8080
         volumes:
-          - ./harPool:/cta/harPool #如无账号可删此行
+          - ./harPool:/cta/harPool #如无账号，或使用refresh_token时可删此行
           - ./api_keys.txt:/cta/api_keys.txt #自建key，说明详见作者项目
           - ./accounts.txt:/cta/accounts.txt #如无账号可删此行
+          #- ./cookies.json:/cta/cookies.json #使用refresh_token时取消注释
         environment:
           SERVER_HOST: 0.0.0.0
           ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
@@ -66,7 +70,7 @@
         container_name: wgcf
         restart: always
     ```
-- 五、文件位置关系如下图
+- 五、文件位置关系如下图（如使用refresh_token，则需新建cookies.json文件，并可删除harPool文件夹）
   + ![image](https://github.com/slippersheepig/ChatGPT-to-API/assets/58287293/b1eda56d-5b43-410b-ac35-f9dd62ed748f)
 - 六、运行`docker-compose up -d`即启动成功，API访问地址为`http://[ip]:8080/v1/chat/completions`，API KEY为`api_keys.txt`里填写的KEY，根据你使用的ChatGPT项目自行修改代理地址即可
   + 常见项目使用方法如下
