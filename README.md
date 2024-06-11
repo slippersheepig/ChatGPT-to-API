@@ -31,7 +31,7 @@
   + ```bash
     services:
       app:
-        image: sheepgreen/chatgpt-to-api
+        image: sheepgreen/chatgpt-to-api #或使用github镜像ghcr.io/slippersheepig/chatgpt-to-api
         container_name: cta
         restart: always
         ports:
@@ -49,7 +49,7 @@
   + ```bash
     services:
       app:
-        image: sheepgreen/chatgpt-to-api
+        image: sheepgreen/chatgpt-to-api #或使用github镜像ghcr.io/slippersheepig/chatgpt-to-api
         container_name: cta
         restart: always
         ports:
