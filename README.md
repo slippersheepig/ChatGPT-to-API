@@ -44,7 +44,7 @@
         environment:
           SERVER_HOST: 0.0.0.0
           ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
-          #CLIENT_PROFILE: Chrome_111 #无账号使用时取消注释
+          #CLIENT_PROFILE: Chrome_124 #无账号使用时取消注释
           #UA: Mozilla/5.0 #无账号使用时取消注释
     ```
   + 若你的网络不能直接访问ChatGPT
@@ -64,7 +64,7 @@
         environment:
           SERVER_HOST: 0.0.0.0
           ADMIN_PASSWORD: TotallySecurePassword #自行修改密码
-          #CLIENT_PROFILE: Chrome_111 #无账号使用时取消注释
+          #CLIENT_PROFILE: Chrome_124 #无账号使用时取消注释
           #UA: Mozilla/5.0 #无账号使用时取消注释
           HTTP_PROXY: http://wgcf:40002
         depends_on:
