@@ -38,3 +38,5 @@ jobs:
           linux/ppc64le
         push: true
         tags: ghcr.io/${{ github.repository_owner }}/chatgpt-to-api:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
