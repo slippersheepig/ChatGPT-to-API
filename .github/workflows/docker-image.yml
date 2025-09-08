@@ -37,3 +37,5 @@ jobs:
             linux/ppc64le
           push: true
           tags: sheepgreen/chatgpt-to-api:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
